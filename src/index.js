@@ -389,10 +389,6 @@ class CompressionPlugin {
             } else {
               compilation.deleteAsset(name);
             }
-          } else {
-            compilation.updateAsset(name, source, {
-              related: { [relatedName]: newFilename },
-            });
           }
 
           compilation.emitAsset(newFilename, output.source, newInfo);
